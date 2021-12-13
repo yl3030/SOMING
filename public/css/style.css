@@ -38,13 +38,15 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #e9eaea;
+  background-color: rgba(255, 255, 255, 0.2);
   z-index: 100;
   opacity: 0.3;
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+  mix-blend-mode: difference;
+  pointer-events: none;
 }
 
 .cursor-2 {
@@ -55,6 +57,8 @@
   background-color: #fff;
   z-index: 105;
   opacity: 0.9;
+  mix-blend-mode: difference;
+  pointer-events: none;
 }
 
 body {
@@ -66,6 +70,7 @@ body {
   margin: 0;
   padding: 0;
   cursor: none;
+  background-color: #fff;
 }
 
 a {
@@ -115,7 +120,7 @@ header .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 160px;
+  width: 125px;
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -123,7 +128,7 @@ header .logo {
 }
 
 header .logo img {
-  width: 200px;
+  width: 100%;
 }
 
 header .lang {
@@ -149,7 +154,7 @@ header .lang a.active {
   margin: 0;
   padding: 0;
   width: 100%;
-  padding-bottom: 70.63%;
+  height: 100vh;
 }
 
 .main-pic img {
@@ -158,8 +163,8 @@ header .lang a.active {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .main-pic img.main-pic-1 {
@@ -197,17 +202,18 @@ header .lang a.active {
   padding-bottom: 53%;
   background-color: #4b627a;
   overflow: hidden;
-  -webkit-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .color-box .common-text {
   margin: 0;
   color: #fff;
-  width: 60%;
+  width: 90%;
   top: 5%;
   right: 5%;
   position: absolute;
+  text-align: right;
 }
 
 .color-box .orange-deepgreen {
@@ -219,8 +225,8 @@ header .lang a.active {
   bottom: 0;
   -webkit-transform: skewY(-5deg);
           transform: skewY(-5deg);
-  -webkit-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .color-box .yellow-gray {
@@ -233,8 +239,8 @@ header .lang a.active {
   bottom: -10%;
   -webkit-transform: skewY(5deg);
           transform: skewY(5deg);
-  -webkit-transition: 1.5s ease-in-out;
-  transition: 1.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .color-box .arrow-box {
@@ -293,17 +299,20 @@ header .lang a.active {
   bottom: 0;
 }
 
+.second-title {
+  font-family: DIN-Medium;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
 .good {
   padding: 8%;
 }
 
 .good h2 {
-  font-family: DIN-Medium;
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 2px;
   margin-bottom: 8%;
-  line-height: 1;
   margin-top: 0;
 }
 
@@ -317,7 +326,7 @@ header .lang a.active {
 
 .good .good_icon .pic img {
   display: block;
-  width: 60%;
+  width: 40%;
   margin: 0 auto 20px;
 }
 
@@ -346,11 +355,6 @@ header .lang a.active {
 }
 
 .any h2 {
-  font-family: DIN-Medium;
-  text-align: center;
-  font-size: 32px;
-  letter-spacing: 2px;
-  line-height: 1;
   position: absolute;
   width: 100%;
   top: 8%;
@@ -471,7 +475,7 @@ header .lang a.active {
 }
 
 .touch .common-text {
-  width: 55%;
+  width: calc(100% - 320px);
 }
 
 footer {
@@ -496,9 +500,6 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
-  .main-pic {
-    padding-bottom: 135%;
-  }
   .main-pic .slogan {
     font-size: 32px;
     left: 15%;
@@ -507,10 +508,11 @@ footer p {
     padding-bottom: 135%;
   }
   .color-box .common-text {
-    width: 95%;
-    right: inherit;
-    left: 5%;
     line-height: 1.7;
+    text-align: left;
+  }
+  .color-box .common-text br {
+    display: none;
   }
   .color-box .orange-deepgreen {
     padding-bottom: 55%;
@@ -553,6 +555,9 @@ footer p {
   .good p {
     margin: 0;
     line-height: 1.7;
+  }
+  .good p br {
+    display: none;
   }
   .any {
     padding-bottom: 129%;
