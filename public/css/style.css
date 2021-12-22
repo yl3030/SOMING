@@ -379,13 +379,13 @@ header .lang a.active {
 }
 
 .color-box.stage-3 {
-  background-color: #dfae3d;
+  background-color: #DFAE3D;
 }
 
 .color-box.stage-3 .color-1 {
   background-color: #fbfbfb;
-  -webkit-transform: skewY(-3deg);
-          transform: skewY(-3deg);
+  -webkit-transform: skewY(3deg);
+          transform: skewY(3deg);
   padding-bottom: 27%;
 }
 
@@ -640,6 +640,9 @@ header .lang a.active {
 .touch > div .mail {
   text-align: right;
   margin-top: 5px;
+  display: block;
+  padding-right: 5px;
+  font-size: 17px;
 }
 
 .touch .common-text {
@@ -672,9 +675,13 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+  header .logo {
+    margin-left: 0;
+  }
   .main-pic .slogan {
     font-size: 32px;
     left: 15%;
+    bottom: 30%;
   }
   .color-box {
     padding-bottom: 100%;

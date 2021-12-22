@@ -81,8 +81,10 @@ $(".prev").click(function () {
 $(".arrow-box").mouseenter(function(){
   $(".cursor").css("opacity","0");
   $(".cursor-2").css("opacity","0");
+  $("body").css("cursor","pointer");
 })
 $(".arrow-box").mouseleave(function(){
   $(".cursor").css("opacity","1");
   $(".cursor-2").css("opacity","1");
+  $("body").css("cursor","none");
 })

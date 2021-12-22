@@ -314,10 +314,10 @@ header {
         }
     }
     &.stage-3 {
-        background-color: #dfae3d;
+        background-color: #DFAE3D;
         .color-1 {
             background-color: #fbfbfb;
-            transform: skewY(-3deg);
+            transform: skewY(3deg);
             padding-bottom: 27%;
         }
         .color-2 {
@@ -517,6 +517,9 @@ header {
             // font-size: 15px;
             text-align: right;
             margin-top: 5px;
+            display: block;
+            padding-right: 5px;
+            font-size: 17px;
         }
     }
     .common-text {
@@ -556,11 +559,17 @@ footer {
 }
 
 @media screen and (max-width:768px) {
+    header {
+        .logo {
+            margin-left: 0;
+        }
+    }
     .main-pic {
         // padding-bottom: 135%;
         .slogan {
             font-size: 32px;
             left: 15%;
+            bottom: 30%;
         }
     } 
     .color-box {
