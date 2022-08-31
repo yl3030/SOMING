@@ -4,7 +4,7 @@
     padding: 0;
     width: 100%;
     // height: 100vh;
-    padding-bottom: 54.84%;
+    padding-bottom: 35%;
     img {
         position: absolute;
         width: 100%;
@@ -46,7 +46,7 @@
 .color-box {
     position: relative;
     width: 100%;
-    padding-bottom: 21.83%;
+    padding-bottom: 15%;
     overflow: hidden;
     transition: 0.5s ease-in-out;
     .common-text {
@@ -54,7 +54,7 @@
         color: #fff;
         width: 100%;
         max-width: 700px;
-        top: 3vw;
+        top: 1.5vw;
         right: 5vw;
         position: absolute;
         opacity: 0;
@@ -159,12 +159,13 @@
         .color-1 {
             background-color: #c1521d;
             transform: skewY(-3deg);
-            padding-bottom: 11%;
+            padding-bottom: 8%;
+            bottom: -5%;
         }
         .color-2 {
             background-color: #e7d5af;
-            padding-bottom: 13%;
-            bottom: -14%;
+            padding-bottom: 7.5%;
+            bottom: -18%;
             transform: skewY(3deg);
         }
     }
@@ -173,7 +174,7 @@
         .color-1 {
             background-color: #4b431f;
             transform: none;
-            padding-bottom: 11%;
+            padding-bottom: 10%;
         }
         .color-2 {
             background-color: #e3e3d5;
@@ -187,11 +188,11 @@
         .color-1 {
             background-color: #fbfbfb;
             transform: skewY(2deg);
-            padding-bottom: 12%;
+            padding-bottom: 8%;
         }
         .color-2 {
             background-color: #CBC3BB;
-            padding-bottom: 13.5%;
+            padding-bottom: 9%;
             bottom: -14%;
             transform: skewY(-2deg);
         }
@@ -201,11 +202,11 @@
         .color-1 {
             background-color: #4E738A;
             transform: skewY(-2deg);
-            padding-bottom: 11%;
+            padding-bottom: 7%;
         }
         .color-2 {
             background-color: #EFEEE3;
-            padding-bottom: 9%;
+            padding-bottom: 5%;
             bottom: -14%;
             transform: skewY(2deg);
         }
@@ -245,9 +246,7 @@
 
 .home {
     &_x {
-        padding-left: 40px;
-        padding-right: 40px;
-        padding: 73px 40px 50px;
+        padding: 73px 80px 50px;
         &_text {
             width: 60%;
             padding-right: 140px;
@@ -267,17 +266,30 @@
                 text-align: justify;
             }
             a {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 35px;
+                height: 35px;
+                background-color: #000;
+                border-radius: 50%;
                 img {
-                    width: 100%;
+                    width: 45%;
+                    transition: 0.3s;
+                }
+                &:hover {
+                    img {
+                        transform: translateX(5px);
+                    }
                 }
             }
         }
         &_pic {
             width: 40%;
             img {
-                width: 100%;
+                width: 90%;
+                margin-left: auto;
+                display: block;
             }
         }
     }
@@ -382,11 +394,40 @@
             }
         }
     }
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
+        >div {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+    &_inner {
+        width: 100%;
+        padding-bottom: 82.64%;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        p {
+            color: #fff;
+            position: absolute;
+            margin: 0;
+            font-size: 15px;
+            left: 4.95%;
+            bottom: 31.94%;
+        }
+    }
 }
 
 @media screen and (max-width:991px) {
     .main-pic {
-        padding-bottom: 103.19%;
+        padding-bottom: 75%;
         .slogan {
             font-size: 38px;
             left: 11.26vw;
@@ -394,7 +435,7 @@
         }
     }
     .color-box {
-        padding-bottom: 66.97%;
+        padding-bottom: 50%;
         .common-text {
             right: 0;
             padding-left: 30px;
@@ -403,12 +444,12 @@
         }
         &.stage-1 {
             .color-1 {
-                padding-bottom: 33%;
+                padding-bottom: 34%;
                 transform: skewY(-5deg);
             }
             .color-2 {
-                padding-bottom: 32%;
-                bottom: -4%;
+                padding-bottom: 33%;
+                bottom: -6%;
             }
         }
         &.stage-2 {
@@ -451,6 +492,9 @@
             &_pic {
                 width: 100%;
                 order: 1;
+                img {
+                    width: 100%;
+                }
             }
             &_text {
                 width: 100%;
@@ -476,15 +520,18 @@
 
 @media screen and (max-width:767.98px) {
     .main-pic {
+        // padding-bottom: 70%;
+
         .slogan {
             font-size: 32px;
         }
     } 
     .color-box {
-        padding-bottom: 100%;
+        padding-bottom: 60%;
         .common-text {
             line-height: 1.7;
             text-align: left;
+            top: 5vw;
             br {
                 display: none;
             }
@@ -497,40 +544,50 @@
         }
         &.stage-1 {
             .color-1 {
-                padding-bottom: 50%;
+                padding-bottom: 30%;
+                transform: skewY(-6deg);
             }
             .color-2 {
-                padding-bottom: 52%;
+                padding-bottom: 28%;
+                bottom: -6%;
+                transform: skewY(4deg);
             }
         }
         &.stage-2 {
             .color-1 {
-                padding-bottom: 40%;
+                padding-bottom: 30%;
             }
             .color-2 {
-                padding-bottom: 30%;
+                // padding-bottom: 30%;
             }
         }
         &.stage-3 {
             .color-1 {
-                padding-bottom: 45%;
+                padding-bottom: 30%;
             }
             .color-2 {
-                padding-bottom: 57%;
+                padding-bottom: 35%;
             }
         }
         &.stage-4 {
             .color-1 {
-                padding-bottom: 55%;
+                padding-bottom: 27%;
             }
             .color-2 {
-                padding-bottom: 57%;
+                padding-bottom: 25%;
             }
         }
     }
    
     .any {
         padding-bottom: 129%;
+        background-image: url(../img/home-pic1.png);
+        background-size: cover;
+        background-position: 86% center;
+        background-repeat: no-repeat;
+        img {
+            display: none;
+        }
         // h2 {
         //     font-size: 20px;
         //     line-height: 1.5;
@@ -597,12 +654,17 @@
                 }
             }
         }
+        &_inner {
+            margin-bottom: 16px;
+        }
     } 
 }
 
 @media screen and (max-width:575.98px) {
     
     .main-pic {
+        // padding-bottom: 80%;
+        padding-bottom: 60%;
         .slogan {
             font-size: 28px;
         }
@@ -614,6 +676,7 @@
                 padding-top: 30px;
                 a {
                     width: 55px;
+                    height: 55px;
                 }
                 h3 {
                     font-size: 19px;
@@ -655,15 +718,15 @@
             padding-left: 20px;
             padding-right: 20px;
         }
-        &.stage-1 {
-            .color-1 {
-                padding-bottom: 45%;
-            }
-            .color-2 {
-                bottom: -9%;
-                padding-bottom: 52%;
-            }
-        }
+        // &.stage-1 {
+        //     .color-1 {
+        //         padding-bottom: 45%;
+        //     }
+        //     .color-2 {
+        //         bottom: -9%;
+        //         padding-bottom: 52%;
+        //     }
+        // }
         .arrow-box {
             left: 20px;
         }

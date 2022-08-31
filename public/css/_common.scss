@@ -245,7 +245,7 @@ main {
 }
 
 footer {
-    padding: 100px 40px 20px;
+    padding: 110px 40px 20px;
     background-color: #e9eaea;
     p {
         line-height: 1;
@@ -260,6 +260,14 @@ footer {
         // margin-bottom: 10px;
         display: block;
         margin: 0 0 13px auto;
+    }
+    ul {
+        li {
+            margin-bottom: 3px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
@@ -329,7 +337,7 @@ footer {
         padding-top: 60px;
     }
     footer {
-        padding: 40px 30px 30px;
+        padding: 50px 30px 20px;
     }
     .touch {
         padding: 60px 30px;

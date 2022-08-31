@@ -207,6 +207,10 @@
                     }
                     &_text {
                         order: 1;
+                        .inner {
+                            padding-left: 0;
+                            padding-right: 87px;
+                        }
                     }
                     &_intro {
                         margin-left: auto;
@@ -253,10 +257,21 @@
     }
     &_more {
         width: 33px;
-        display: block;
+        height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-top: 15px;
+        background-color: #000;
+        border-radius: 50%;
         img {
-            width: 100%;
+            width: 45%;
+            transition: 0.3s;
+        }
+        &:hover {
+            img {
+                transform: translateX(5px);
+            }
         }
     }
     &_bannerContent {
@@ -415,6 +430,17 @@
             &_text {
                 width: 64%;
             }
+            &_item {
+                &:nth-child(even) {
+                    .product_classify {
+                        &_text {
+                            .inner {
+                                padding-right: 60px;
+                            }
+                        }
+                    }
+                }
+            }
         } 
         &_content {
             &_left {
@@ -444,6 +470,7 @@
                 width: 100%;
                 .inner {
                     padding-left: 0;
+                    padding-right: 0 !important;
                     padding-bottom: 0;
                     p {
                         order: 2;
@@ -514,6 +541,7 @@
         &_more {
             position: absolute;
             width: 66px;
+            height: 66px;
             right: 40px;
             bottom: 20px;
         }
@@ -785,6 +813,7 @@
         }
         &_more {
             width: 12vw;
+            height: 12vw;
             right: 20px;
         }
         &_content {
@@ -829,6 +858,7 @@
         }
         &_more {
             width: 10vw;
+            height: 10vw;
         }
         &_content {
             &_left {
