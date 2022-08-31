@@ -194,6 +194,25 @@ header {
             }
         }
     }
+    .header_right {
+        &.color-white {
+            .header_nav {
+                ul {
+                    li {
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .lang {
+                a {
+                    color: #fff;
+                    border-color: #fff;
+                }
+            }
+        }
+    }
 }
 .touch {
     padding: 80px 30px;
@@ -221,7 +240,9 @@ header {
     }
 }
 
-
+main {
+    overflow: hidden;
+}
 
 footer {
     padding: 100px 40px 20px;
@@ -232,7 +253,7 @@ footer {
         font-weight: 300;
         letter-spacing: 1.2px;
         font-size: 11px;
-        margin-bottom: 9px;
+        margin-bottom: 5px;
     }
     img {
         width: 26px;
@@ -282,6 +303,25 @@ footer {
             }
             &.active {
                 left: 0;
+            }
+        }
+        .header_right {
+            &.color-white {
+                .header_nav {
+                    ul {
+                        li {
+                            a {
+                                color: #4C4948;
+                            }
+                        }
+                    }
+                }
+                .lang {
+                    a {
+                        color: #4C4948;
+                        border-color: #4C4948;
+                    }
+                }
             }
         }
     }

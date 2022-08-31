@@ -98,3 +98,7 @@ $(".header_menu").click(function(){
   $(this).toggleClass("active");
   $(".header_nav").toggleClass("active");
 })
+
+$(".color-select").click(function(){
+  $(this).addClass("active").siblings(".color-select").removeClass("active");
+})
