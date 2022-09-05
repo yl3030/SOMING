@@ -422,7 +422,7 @@ footer ul li:last-child {
   margin: 0;
   padding: 0;
   width: 100%;
-  padding-bottom: 35%;
+  padding-bottom: calc(100vh - 15vw);
 }
 
 .main-pic img {
@@ -953,9 +953,18 @@ footer ul li:last-child {
   bottom: 31.94%;
 }
 
+@media screen and (max-width: 1199.98px) {
+  .main-pic {
+    padding-bottom: calc(100vh - 20vw);
+  }
+  .color-box {
+    padding-bottom: 20%;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .main-pic {
-    padding-bottom: 75%;
+    padding-bottom: calc(100vh - 30vw - 60px);
   }
   .main-pic .slogan {
     font-size: 38px;
@@ -963,7 +972,7 @@ footer ul li:last-child {
     bottom: 5.43vw;
   }
   .color-box {
-    padding-bottom: 50%;
+    padding-bottom: 30%;
   }
   .color-box .common-text {
     right: 0;
@@ -972,38 +981,38 @@ footer ul li:last-child {
     max-width: none;
   }
   .color-box.stage-1 .color-1 {
-    padding-bottom: 34%;
+    padding-bottom: 18%;
     -webkit-transform: skewY(-5deg);
             transform: skewY(-5deg);
   }
   .color-box.stage-1 .color-2 {
-    padding-bottom: 33%;
-    bottom: -6%;
+    padding-bottom: 17%;
+    bottom: -9%;
   }
   .color-box.stage-2 .color-1 {
-    padding-bottom: 28.46%;
+    padding-bottom: 20%;
   }
   .color-box.stage-2 .color-2 {
-    padding-bottom: 18.53%;
+    padding-bottom: 15%;
   }
   .color-box.stage-3 .color-1 {
-    padding-bottom: 32%;
+    padding-bottom: 16%;
   }
   .color-box.stage-3 .color-2 {
-    padding-bottom: 40%;
+    padding-bottom: 18%;
     -webkit-transform: skewY(-4deg);
             transform: skewY(-4deg);
   }
   .color-box.stage-4 .color-1 {
-    padding-bottom: 34%;
+    padding-bottom: 19%;
     -webkit-transform: skewY(-5deg);
             transform: skewY(-5deg);
   }
   .color-box.stage-4 .color-2 {
-    padding-bottom: 32%;
+    padding-bottom: 13%;
     -webkit-transform: skewY(5deg);
             transform: skewY(5deg);
-    bottom: -14%;
+    bottom: -15%;
   }
   .color-box .arrow-box {
     left: 30px;
@@ -1044,6 +1053,9 @@ footer ul li:last-child {
 }
 
 @media screen and (max-width: 767.98px) {
+  .main-pic {
+    padding-bottom: calc(100vh - 60vw - 60px);
+  }
   .main-pic .slogan {
     font-size: 32px;
   }
@@ -1063,6 +1075,7 @@ footer ul li:last-child {
   }
   .color-box .arrow-box p {
     margin: 5px 0 0;
+    display: none;
   }
   .color-box.stage-1 .color-1 {
     padding-bottom: 30%;
@@ -1157,9 +1170,6 @@ footer ul li:last-child {
 }
 
 @media screen and (max-width: 575.98px) {
-  .main-pic {
-    padding-bottom: 60%;
-  }
   .main-pic .slogan {
     font-size: 28px;
   }
@@ -1184,6 +1194,9 @@ footer ul li:last-child {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .color-box.stage-2 .color-2 {
+    padding-bottom: 20%;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1201,6 +1214,12 @@ footer ul li:last-child {
 }
 
 @media screen and (max-width: 400px) {
+  .main-pic {
+    padding-bottom: calc(100vh - 70vw - 60px);
+  }
+  .color-box {
+    padding-bottom: 70%;
+  }
   .color-box .common-text {
     padding-left: 20px;
     padding-right: 20px;
