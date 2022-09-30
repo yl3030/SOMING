@@ -6,6 +6,7 @@
     // height: 100vh;
     // padding-bottom: 35%;
     padding-bottom: calc(100vh - 15vw);
+    // transition: 0.5s ease-in-out;
     img {
         position: absolute;
         width: 100%;
@@ -16,6 +17,20 @@
         &.active {
             opacity: 1;
         }
+    }
+    &-1 {
+        transform: scale(1.05) translateX(-1.2%);
+    }
+    &-2 {
+        transform: scale(0.97) translate(1.1%, 1.5%);
+    }
+    &-3 {
+        transform: scale(1.06) translateX(-3.7%);
+    }
+    &-4 {
+        transform: scale(0.97) translate(1.1%, 1.5%);
+        bottom: 0;
+        top: inherit;
     }
     .slogan {
         font-family: FrutigerBQ-Black;
@@ -81,7 +96,7 @@
     .arrow-box {
         position: absolute;
         left: 5%;
-        bottom: 10%;
+        bottom: 6%;
         // z-index: 100;
         >div {
             justify-content: flex-start;
@@ -203,12 +218,13 @@
         .color-1 {
             background-color: #4E738A;
             transform: skewY(-2deg);
-            padding-bottom: 7%;
+            padding-bottom: 10%;
+            bottom: -5%;
         }
         .color-2 {
             background-color: #EFEEE3;
-            padding-bottom: 5%;
-            bottom: -14%;
+            padding-bottom: 7%;
+            bottom: -15%;
             transform: skewY(2deg);
         }
     }
@@ -267,20 +283,22 @@
                 text-align: justify;
             }
             a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 35px;
-                height: 35px;
-                background-color: #000;
-                border-radius: 50%;
-                img {
-                    width: 45%;
-                    transition: 0.3s;
-                }
+                width: fit-content;
                 &:hover {
-                    img {
-                        transform: translateX(5px);
+                    .home_x_link {
+                        &Circle {
+                            background-color: transparent;
+                            svg {
+                                .cls-1 {
+                                    fill: #000;
+                                }
+                            }
+                        }
+                        &Square {
+                            border-color: #000;
+                            background-color: #000;
+                            color: #fff;
+                        }
                     }
                 }
             }
@@ -291,6 +309,31 @@
                 width: 90%;
                 margin-left: auto;
                 display: block;
+            }
+        }
+        &_link {
+            &Circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35px;
+                height: 35px;
+                background-color: #000;
+                border: 1px solid #000;
+                border-radius: 50%;
+                transition: 0.3s;
+                margin-right: 10px;
+                svg {
+                    width: 45%;
+                    transition: 0.3s;
+                }
+            }
+            &Square {
+                padding: 5px 26px;
+                font-size: 12px;
+                border: 1px solid #666464;
+                color: #666464;
+                transition: 0.3s;
             }
         }
     }
@@ -323,7 +366,8 @@
 }
 
 .three-pic {
-    padding-top: 6.26%;
+    // padding-top: 6.26%;
+    padding: 6.26% 80px 0;
     width: 100%;
     box-sizing: border-box;
     .common-text {
@@ -493,9 +537,9 @@
             }
             .color-2 {
                 // padding-bottom: 32%;
-                padding-bottom: 13%;
+                padding-bottom: 12%;
                 transform: skewY(5deg);
-                bottom: -15%;
+                bottom: -16%;
             }
         }
         .arrow-box {
@@ -575,9 +619,6 @@
             .color-1 {
                 padding-bottom: 30%;
             }
-            .color-2 {
-                // padding-bottom: 30%;
-            }
         }
         &.stage-3 {
             .color-1 {
@@ -592,7 +633,7 @@
                 padding-bottom: 27%;
             }
             .color-2 {
-                padding-bottom: 25%;
+                padding-bottom: 22%;
             }
         }
     }
@@ -606,26 +647,17 @@
         img {
             display: none;
         }
-        // h2 {
-        //     font-size: 20px;
-        //     line-height: 1.5;
-        // }
     }
     .second-title {
         font-size: 20px;
         line-height: 1.5;
     }
     .three-pic {
-        // padding-top: 15%;
-        // padding-top: 11.18vw;
         padding-top: 60px;
         .common-text {
             width: 100%;
-            // padding-left: 20px;
-            // padding-right: 20px;
             box-sizing: border-box;
             line-height: 1.7;
-            // margin-bottom: 22.06vw;
             margin-bottom: 100px;
             text-align: justify;
         }
@@ -679,10 +711,7 @@
 }
 
 @media screen and (max-width:575.98px) {
-    
     .main-pic {
-        // padding-bottom: 80%;
-        // padding-bottom: 60%;
         .slogan {
             font-size: 28px;
         }
@@ -692,10 +721,10 @@
             padding-top: 60px;
             &_text {
                 padding-top: 30px;
-                a {
-                    width: 55px;
-                    height: 55px;
-                }
+                // a {
+                //     width: 55px;
+                //     height: 55px;
+                // }
                 h3 {
                     font-size: 19px;
                     margin-bottom: 15px;
@@ -762,9 +791,9 @@
                 h3 {
                     font-size: 16px;
                 }
-                a {
-                    width: 55px;
-                }
+                // a {
+                //     width: 55px;
+                // }
             }
         }
     }

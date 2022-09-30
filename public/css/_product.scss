@@ -59,19 +59,40 @@
                 }
             }
         }
+        .viewall {
+            margin: 12px 0 6px auto;
+            display: block;
+            padding: 8px 20px;
+            border: 1px solid #666464;
+            color: #666464;
+            transition: 0.3s;
+            &:hover {
+                background-color: #000;
+                border-color: #000;
+                color: #fff;
+            }
+        }
     }
     &_classify {
-        padding: 17.78vw 40px 94px;
+        padding: 17.78vw 80px 94px;
         &_pic {
             width: 32%;
             position: relative;
         }
         &_intro {
             width: 60%;
+            .bike_list_class {
+                background-color: #fff !important;
+            }
+            .bike_brand {
+                p {
+                    background-color: #EAE9EA;
+                }
+            }
         }
         &_text {
             width: 68%;
-            padding-bottom: 50px;
+            // padding-bottom: 50px;
             .inner {
                 margin-left: auto;
                 padding-bottom: 31px;
@@ -105,7 +126,7 @@
             font-size: 28px;
             font-family: FrutigerBQ-Black;
             line-height: 1.2;
-            letter-spacing: 13px;
+            letter-spacing: 10px;
             margin-bottom: 15px;
             width: 100%;
             &_img {
@@ -117,6 +138,17 @@
             width: 100%;
             bottom: 0;
             right: -30%;
+            &.mainPic {
+                &-M27 {
+                    bottom: -12.5%;
+                }
+                &-peloton {
+                    bottom: -7.5%;
+                }
+                &-cadence {
+                    bottom: 0;
+                }
+            }
         }
         &_spec {
             width: 100%;
@@ -131,6 +163,7 @@
                     width: 100%;
                     height: 5px;
                     background-color: #E0E0E0;
+                    // background-color: #fff;
                     border-radius: 100px;
                     &_inner {
                         height: 100%;
@@ -213,6 +246,7 @@
         }
         &_item {
             margin-bottom: 20vw;
+            // margin-bottom: 50px;
             &:nth-child(even) {
                 .product_classify {
                     &_pic {
@@ -239,7 +273,11 @@
             }
         }
         &_color {
-            margin-bottom: 25px;
+            // margin-bottom: 25px;
+            position: absolute;
+            width: 100%;
+            top: calc(100% + 22px);
+            left: 0;
             label {
                 font-family: DIN-Bold;
                 font-size: 15px;
@@ -248,9 +286,10 @@
             .color-select {
                 width: 34px;
                 height: 34px;
-                padding: 3.5px;
-                margin-left: 13px;
+                padding: 3px;
+                margin-left: 12px;
                 transition: 0.3s;
+                border: 0;
                 .color-inner {
                     width: 100%;
                     height: 100%;
@@ -311,20 +350,33 @@
         }
     }
     &_content {
-        padding: 52px 45px 62px;
-        display: flex;
-        flex-wrap: wrap;
+        // padding: 52px 45px 62px;
+        // position: relative;
+        background: linear-gradient(to right, #E6E6E6 0%,#F4F4F4 50%,#FFFFFF 66%,#EBEBEC 100%);
+        &_inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 70%;
+            margin: 0 auto;
+            position: relative;
+
+        }
         &_left {
-            width: 25%;
+            width: 20%;
             padding-right: 53px;
             .product_classify_intro {
                 width: 100%;
             }
         }
         &_right {
-            width: 75%;
+            width: 80%;
             display: flex;
             flex-wrap: wrap;
+            // mix-blend-mode: multiply;
+            #pc-tabContent {
+                mix-blend-mode: multiply;
+            }
             .swiper-button-next, .swiper-button-prev {
                 width: 37px;
                 height: 37px;
@@ -355,30 +407,89 @@
             .product_classify_dash {
                 width: 100%;
             }
+            .tab-content {
+                width: 100%;
+            }
+        }
+        .product_classify_spec_item {
+            .bar {
+                background-color: #fff;
+            }
+        } 
+    }
+    &-slider {
+        width: 100%;
+        position: relative;
+        padding-bottom: 66.67%;
+        .swiper-pagination {
+            position: absolute;
+            // right: 14%;
+            right: 0;
+            top: calc(100% + 24px);
+            &-bullet {
+                width: 24px;
+                height: 1px;
+                border-radius: 0;
+                display: block;
+                margin-top: 9px;
+                background-color: #BFC0C0;
+                opacity: 1;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &-active {
+                    background-color: #040000;
+                }
+            }
         }
     }
+    &_pagi {
+        position: absolute;
+            // right: 14%;
+            right: 0;
+            top: calc(100% + 24px);
+            &_bar {
+                width: 24px;
+                height: 1px;
+                border-radius: 0;
+                display: block;
+                margin-top: 9px;
+                background-color: #BFC0C0;
+                opacity: 1;
+                // cursor: pointer;
+                &:first-child {
+                    margin-top: 0;
+                }
+                &.active {
+                    background-color: #040000;
+                }
+            }
+    }
     &_swiper {
-        // margin-bottom: 17px;
-        margin-bottom: 1.6vw;
+        position: absolute;
         width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
         &_pic {
             width: 100%;
-            padding-bottom: 54.83%;
+            padding-bottom: 66.67%;
             position: relative;
             img {
                 width: 100%;
                 height: 100%;
                 position: absolute;
                 object-fit: cover;
-
                 top: 0;
                 left: 0;
             }
         }
     }
     &_detail {
-        padding-bottom: 72px;
-        width: 100%;
+        padding-top: 116px;
+        padding-bottom: 55px;
+        width: 70%;
+        margin: 0 auto;
         &_item {
             h3 {
                 font-size: 13px;
@@ -418,6 +529,29 @@
                 border-top: 1px solid #000;
                 width: 100% !important;
                 text-align: justify;
+            }
+        }
+        .nav-tabs {
+            border: 0;
+            .nav-link {
+                border-radius: 50%;
+            }
+        }
+        &_color {
+            border: 0;
+        }
+    }
+    &-breadcrumb {
+        margin-top: 80px;
+        border-top: 1px solid #040000;
+        .breadcrumb {
+            width: 70%;
+            margin: 0 auto;
+            height: 40px;
+            align-items: center;
+            a, li {
+                color: #9FA0A0;
+                font-size: 12px;
             }
         }
     }
@@ -570,12 +704,30 @@
     }
 }
 
+@media screen and (max-width:1700px) {
+    .product {
+        &_content {
+            &_inner {
+                width: 80%;
+            }
+            &_left {
+                padding-right: 30px;
+            }
+        }
+        &-breadcrumb {
+            .breadcrumb {
+                width: 80%;
+            }
+        }
+        &_detail {
+            width: 80%;
+        }
+    }
+}
+
 @media screen and (max-width:1400px) {
     .bike {
         &_list {
-            &_class {
-                // width: 85%;
-            }
             &_text {
                 .product_classify_slogan {
                     font-size: 22px;
@@ -583,9 +735,36 @@
                 }
             }
         }
-        &_brand {
-            // width: 85%;
-            // padding-bottom: 85%;
+    }
+}
+
+@media screen and (max-width:1320px) {
+    .product {
+        &_content {
+            padding-left: 40px;
+            padding-right: 40px;
+            &_inner {
+                width: 100%;
+            }
+            &_left {
+                padding-right: 20px;
+                width: 195px;
+            }
+            &_right {
+                width: calc(100% - 195px);
+            }
+        }
+        &-breadcrumb {
+            padding-left: 40px;
+            padding-right: 40px;
+            .breadcrumb {
+                width: 100%;
+            }
+        }
+        &_detail {
+            width: 100%;
+            padding-left: 40px;
+            padding-right: 40px;
         }
     }
 }
@@ -603,15 +782,10 @@
     .bike {
         &_list {
             align-items: flex-end;
-            &_class {
-                // width: 50%;
-                // width: 100%;
-            }
             &_text {
                 order: 2;
                 padding-bottom: 0;
                 padding-right: 25px;
-                // width: 40%;
                 width: 160px;
                 .product_classify_slogan {
                     margin-bottom: 0;
@@ -624,7 +798,6 @@
                 padding-bottom: 15px;
             }
             &_bar {
-                // width: 60%;
                 width: calc(100% - 160px);
                 order: 3;
             }
@@ -632,16 +805,9 @@
                 position: relative;
             }
         }
-        &_brand {
-            // width: 100%;
-            // padding-bottom: 100%;
-            // width: 50%;
-            // padding-bottom: 50%;
-        }
         &_color {
             &Box {
                 position: absolute;
-                // width: 60%;
                 width: calc(100% - 160px);
                 right: 0;
                 bottom: 180px;
@@ -786,59 +952,84 @@
             bottom: 20px;
         }
         &_content {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 0;
+            background: transparent;
             &_left {
                 width: 100%;
-                padding-right: 0;
+                padding-right: 20px;
+                padding-left: 20px;
+                padding: 46px 20px 55px;
+                order: 2;
                 .product_classify {
                     &_intro {
                         display: flex;
                         align-items: flex-end;
-                        padding-bottom: 40px;
+                        padding-bottom: 0;
                         &_left {
                             padding-right: 30px;
+                            width: 210px;
+                        }
+                        &_right {
+                            width: calc(100% - 210px);
                         }
                     }
                     &_spec {
                         // width: 56%;
-                        width: 228px;
+                        // width: 228px;
+                        width: 100%;
+                        &_item {
+                            .bar {
+                                background-color: #E0E0E0;
+                            }
+                        }
                     }
                     &_slogan {
                         font-size: 28px;
                         margin: 0;
                     }
+                    &_color {
+                        position: static;
+                        margin-bottom: 25px;
+                    }
                 }
             }
             &_right {
                 width: 100%;
+                order: 1;
+                background: linear-gradient(to right, #E6E6E6 0%,#F4F4F4 50%,#FFFFFF 66%,#EBEBEC 100%);
+                mix-blend-mode: none;
             }
+            .bike {
+                &_brand {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &-slider {
+            .swiper-pagination {
+                top: calc(100% + 13px);
+                right: 20px;
+            }
+        }
+        &-breadcrumb {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 0;
+        }
+        &_detail {
+            padding: 0 20px 75px;
         }
     }
     .bike {
         &_list {
-            &_class {
-                // width: 75%;
-            }
-            &_bar {
-                // width: calc(100% - 160px);
-            }
-            &_text {
-                // width: 160px;
-            }
             &_item {
                 margin-bottom: 40px;
                 border-bottom: 1px solid #040000;
                 padding-bottom: 35px;
             }
         }
-        &_brand {
-            // width: 75%;
-            // padding-bottom: 75%;
-        }
         &_color {
             &Box {
-                // width: calc(100% - 160px);
                 bottom: 215px;
             }
         }
@@ -871,13 +1062,12 @@
                 padding-right: 20px;
                 .product_classify {
                     &_intro {
-                        pt
                         &_left {
-                            width: 44%;
+                            // width: 44%;
                         }
                     }
                     &_spec {
-                        width: 56%;
+                        // width: 56%;
                     }
                     &_tag {
                         width: 150px;
@@ -913,7 +1103,20 @@
         }
         &_detail {
             order: 4;
-            padding: 0 20px;
+            // padding: 0 20px;
+            .row {
+                >div {
+                    &:nth-child(2) {
+                        .product_detail_item {
+                            &:first-child {
+                                h3 {
+                                    border-top: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -989,13 +1192,14 @@
         }
         &_content {
             padding-top: 0;
-            padding-bottom: 15.45vw;
+            // padding-bottom: 15.45vw;
             &_left {
+                padding-right: 23px;
                 .product_classify {
                     &_intro {
-                        padding-top: 8.54vw;
+                        // padding-top: 8.54vw;
                         &_left {
-                            padding-right: 5.17vw;
+                            // padding-right: 5.17vw;
                         }
                     }
                     &_slogan {
@@ -1007,6 +1211,12 @@
                 >p {
                     margin-top: 7.08vw;
                     margin-bottom: 10.89vw;
+                }
+            }
+            .bike {
+                &_brand {
+                    width: 100%;
+                    padding-bottom: 100%;
                 }
             }
         }
@@ -1101,8 +1311,26 @@
                         font-size: 24px;
                         letter-spacing: 8px;
                     }
-                    &_spec {
-                        // width: calc(100% - 140px);
+                    &_intro {
+                        &_left {
+                            // width: 180px;
+                            width: 43%;
+                        }
+                        &_right {
+                            // width: calc(100% - 180px);
+                            width: 57%;
+                        }
+                    }
+                    &_color {
+                        margin-bottom: 12px;
+                        .color-select {
+                            width: 25px;
+                            height: 25px;
+                            margin-left: 10px;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -1139,6 +1367,8 @@
         }
         &_content {
             &_left {
+                padding-left: 15px;
+                padding-right: 15px;
                 .product_classify {
                     &_slogan {
                         font-size: 20px;
@@ -1151,6 +1381,14 @@
                     }
                 }
             }
+        }
+        &-breadcrumb {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &_detail {
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }

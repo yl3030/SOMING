@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOMING</title>
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=20220929">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-2"></div>
+    <header class="d-flex justify-content-between align-items-center">
+        <div class="header_menu d-lg-none">
+            <div class="bar top"></div>
+            <div class="bar bottom"></div>
+        </div>
+        <a href="./index.html" class="logo">
+            <!-- <img class="d-lg-block d-none" src="./public/img/logo.svg" alt="LOGO"> -->
+            <img src="./public/img/logo-black.svg" alt="LOGO">
+        </a>
+        <div class="header_right d-flex align-items-center">
+            <nav class="header_nav">
+                <ul class="d-lg-flex ">
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a class="active" href="./bike.html">BIKES</a></li>
+                    <li><a href="./index.html#touch">CONTACT US</a></li>
+                    <li><a href="">RETAILER</a></li>
+                </ul>
+            </nav>
+            <div class="lang d-flex">
+                <a class="active" href="#"><span>EN</span></a>
+                <a href="#"><span>JP</span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <nav class="product-breadcrumb" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="./bike.html">BIKE</a></li>
+              <li class="breadcrumb-item"><a href="./product.html">RIKULAU MARU</a></li>
+              <li class="breadcrumb-item active" aria-current="page">ASO</li>
+            </ol>
+        </nav>
+
+        <div class="product_content">
+            <div class="product_content_inner">
+                <div class="product_content_left">
+                    <div class="product_classify_intro">
+                        <div class="product_classify_intro_left">
+                            <div class="bike_brand">
+                                <p>ASO LITE</p>
+                            </div>
+                            <div class="bike_list_class bg-gray d-lg-block d-none">
+                                RIKULAU MARU
+                            </div>
+                            <p class="product_classify_slogan">RIDE IN<br>STYLE</p>
+                            <img class="product_classify_slogan_img" src="./public/img/rideInStyle.svg" alt="">
+                        </div>
+                        <div class="product_classify_intro_right">
+                            <div class="product_classify_color">
+                                <label class="d-lg-block d-none" for="">color</label>
+                                <nav>
+                                    <div class="nav nav-tabs product_detail_color" id="nav-tab" role="tablist">
+                                      <button class="nav-link color-select active" id="pc-A-tab" data-bs-toggle="tab" data-bs-target="#pc-A" type="button" role="tab" aria-controls="pc-A" aria-selected="true">
+                                        <div class="bike_color_inner" style="background-color: #E27166;"></div>
+                                      </button>
+                                      <button class="nav-link color-select" id="pc-B-tab" data-bs-toggle="tab" data-bs-target="#pc-B" type="button" role="tab" aria-controls="pc-B" aria-selected="false">
+                                        <div class="bike_color_inner" style="background-color: #063863;"></div>
+                                      </button>
+                                      <button class="nav-link color-select" id="pc-C-tab" data-bs-toggle="tab" data-bs-target="#pc-C" type="button" role="tab" aria-controls="pc-C" aria-selected="false">
+                                        <div class="bike_color_inner" style="background-color: #0D86B5;"></div>
+                                      </button>
+                                      <button class="nav-link color-select" id="pc-D-tab" data-bs-toggle="tab" data-bs-target="#pc-D" type="button" role="tab" aria-controls="pc-D" aria-selected="false">
+                                        <div class="bike_color_inner" style="background-color: #79C9CE;"></div>
+                                      </button>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="product_classify_spec">
+                                <div class="product_classify_spec_item">
+                                    <p>riding distance</p>
+                                    <div class="bar">
+                                        <div class="bar_inner" style="width: 14%;"></div>
+                                    </div>
+                                    <div class="product_classify_spec_level distance">
+                                        <span>0</span>
+                                        <span>30</span>
+                                        <span>60</span>
+                                        <span>90+</span>
+                                        <span class="unit">km</span>
+                                    </div>
+                                </div>
+                                <div class="product_classify_spec_item">
+                                    <p>bike rider</p>
+                                    <div class="bar">
+                                        <div class="bar_inner ms-auto" style="width: 30%;"></div>
+                                    </div>
+                                    <div class="product_classify_spec_level">
+                                        <span>men</span>
+                                        <span>women</span>
+                                        <span>kids</span>
+                                    </div>
+                                </div>
+                                <div class="product_classify_spec_item">
+                                    <p>cyclist level</p>
+                                    <div class="bar">
+                                        <div class="bar_inner" style="width: 27.97%;"></div>
+                                    </div>
+                                    <div class="product_classify_spec_level">
+                                        <span>beginner</span>
+                                        <span>intermediate</span>
+                                        <span>advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_content_right">
+                    <div class="tab-content" id="pc-tabContent">
+                        <div class="tab-pane fade pc-tabPane show active" id="pc-A" role="tabpanel" aria-labelledby="pc-A-tab">
+                            <div class="product-slider">
+                                <div class="swiper-container product_swiper" id="swiperA">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                          <div class="product_swiper_pic" data-index="1">
+                                              <img src="./public/img/aso_A-1.jpg" alt="">
+                                          </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic" data-index="2">
+                                            <img src="./public/img/aso_A-2.jpg" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic" data-index="3">
+                                            <img src="./public/img/aso_A-3.jpg" alt="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination" id="pagi-A"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane pc-tabPane fade" id="pc-B" role="tabpanel" aria-labelledby="pc-B-tab">
+                            <div class="product-slider">
+                                <div class="swiper-container product_swiper" id="swiperB">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                          <div class="product_swiper_pic">
+                                              <img src="./public/img/aso_B-1.jpg" alt="">
+                                          </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic">
+                                            <img src="./public/img/aso_B-2.jpg" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic">
+                                            <img src="./public/img/aso_B-3.jpg" alt="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination" id="pagi-B"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane pc-tabPane fade" id="pc-C" role="tabpanel" aria-labelledby="pc-C-tab">
+                            <div class="product-slider">
+                                <div class="swiper-container product_swiper" id="swiperC">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                          <div class="product_swiper_pic">
+                                              <img src="./public/img/aso_C-1.jpg" alt="">
+                                          </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic">
+                                            <img src="./public/img/aso_C-2.jpg" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic">
+                                            <img src="./public/img/aso_C-3.jpg" alt="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination" id="pagi-C"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane pc-tabPane fade" id="pc-D" role="tabpanel" aria-labelledby="pc-D-tab">
+                            <div class="product-slider">
+                                <div class="swiper-container product_swiper" id="swiperD">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                          <div class="product_swiper_pic">
+                                              <img src="./public/img/aso_D-1.jpg" alt="">
+                                          </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic">
+                                            <img src="./public/img/aso_D-2.jpg" alt="">
+                                        </div>
+                                      </div>
+                                      <div class="swiper-slide">
+                                        <div class="product_swiper_pic">
+                                            <img src="./public/img/aso_D-3.jpg" alt="">
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination" id="pagi-D"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="product_detail">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product_detail_item">
+                        <h3>DETAILS</h3>
+                        <ul>
+                            <li>
+                                <h4>Platform</h4>
+                                <p>ASO Series</p>
+                            </li>
+                            <li>
+                                <h4>Model Name</h4>
+                                <p>ASO</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product_detail_item">
+                        <h3>FRAME SET</h3>
+                        <ul>
+                            <li>
+                                <h4>Frame</h4>
+                                <p>26 Inch, Aluminum Alloy Tube, Internal Cable Routing, 3/8*135 mm QR</p>
+                            </li>
+                            <li>
+                                <h4>Fork</h4>
+                                <p>26 Inch, Aluminum Crown, φ28.6 steerer, 3/8*100 QR</p>
+                            </li>
+                            <li>
+                                <h4>Headset</h4>
+                                <p>Ball Bearings, 28.6*44*30</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product_detail_item">
+                        <h3>DRIVETRAIN</h3>
+                        <ul>
+                            <li>
+                                <h4>Shifters</h4>
+                                <p>SHIMANO REVOSHIFT, 7S </p>
+                            </li>
+                            <li>
+                                <h4>Front Derailleur</h4>
+                                <p>-</p>
+                            </li>
+                            <li>
+                                <h4>Rear Derailleur</h4>
+                                <p>SHIMANO TOURNEY TZ, 7S</p>
+                            </li>
+                            <li>
+                                <h4>Crank Set</h4>
+                                <p>Alloy Crank, 36T*170L</p>
+                            </li>
+                            <li>
+                                <h4>Bottom Bracket</h4>
+                                <p>Sealed Bearings</p>
+                            </li>
+                            <li>
+                                <h4>Freewheel</h4>
+                                <p>SHIMANO TOURNEY, 14-28T, 7S</p>
+                            </li>
+                            <li>
+                                <h4>Chain</h4>
+                                <p>KMC</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product_detail_item">
+                        <h3>BRAKES</h3>
+                        <ul>
+                            <li>
+                                <h4>Brake Levers</h4>
+                                <p>Alloy Lever</p>
+                            </li>
+                            <li>
+                                <h4>Brake Pads</h4>
+                                <p>Alloy Pads, Disc Brake, 160mm</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="product_detail_item">
+                        <h3>WHEELS</h3>
+                        <ul>
+                            <li>
+                                <h4>Rims</h4>
+                                <p>Alloy Double Wall, 32H Front, 32H Rear</p>
+                            </li>
+                            <li>
+                                <h4>Front Hub</h4>
+                                <p>Alloy, 2 Sealed Bearings, QR</p>
+                            </li>
+                            <li>
+                                <h4>Rear Hub</h4>
+                                <p>Alloy, 2 Sealed Bearings, QR</p>
+                            </li>
+                            <li>
+                                <h4>Spokes</h4>
+                                <p>Stainless Steel, 14G</p>
+                            </li>
+                            <li>
+                                <h4>Tires</h4>
+                                <p>CST 26*2.10</p>
+                            </li>
+                            <li>
+                                <h4>Tires Size</h4>
+                                <p>2.10</p>
+                            </li>
+                            <li>
+                                <h4>Wheel Size</h4>
+                                <p>26"</p>
+                            </li>
+                            <li>
+                                <h4>Front Tire</h4>
+                                <p>CST 26*2.10</p>
+                            </li>
+                            <li>
+                                <h4>Rear Tire</h4>
+                                <p>CST 26*2.10</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product_detail_item">
+                        <h3>COMPONENTS</h3>
+                        <ul>
+                            <li>
+                                <h4>Grips</h4>
+                                <p>Rubber</p>
+                            </li>
+                            <li>
+                                <h4>Handlebar</h4>
+                                <p>6061 Alloy, Flat Bar, Length 600 mm</p>
+                            </li>
+                            <li>
+                                <h4>Stem</h4>
+                                <p>6061 Alloy, E:90, -7°</p>
+                            </li>
+                            <li>
+                                <h4>Seat Post</h4>
+                                <p>6061 Alloy, φ27.2*300mm</p>
+                            </li>
+                            <li>
+                                <h4>Saddle</h4>
+                                <p>MTB Type</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="product_detail_item_p">Please note that, based on component availability and other factors, specifications are subject to change without notice.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="d-flex align-items-end justify-content-between">
+        <nav>
+            <ul>
+                <li><a href="./about.html">ABOUT</a></li>
+                <li><a href="./product.html">BIKES</a></li>
+                <li><a href="">RETAILER</a></li>
+            </ul>
+        </nav>
+        <div>
+            <a href="mailto:info@somings.co.uk"><img src="./public/img/icon-mail.svg" alt=""></a>
+            <p>COPYRIGHT© SOMINGS_2022</p>
+        </div>
+    </footer>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="./public/js/index.js"></script>
+
+    <script>
+        var swiper = new Swiper("#swiperA", {
+            slidesPerView: 1,
+            direction: "vertical",
+            mousewheel: true,
+            observeParents:true,
+            observeSlideChildren: true,
+            observer:true,
+            speed: 800,
+            loop: true,
+            pagination: {
+                el: "#pagi-A",
+                clickable: true,
+            },
+        });
+        var swiper = new Swiper("#swiperB", {
+            slidesPerView: 1,
+            direction: "vertical",
+            mousewheel: true,
+            observeParents:true,
+            observeSlideChildren: true,
+            observer:true,
+            speed: 800,
+            loop: true,
+            pagination: {
+                el: "#pagi-B",
+                clickable: true,
+            },
+        });
+        var swiper = new Swiper("#swiperC", {
+            slidesPerView: 1,
+            direction: "vertical",
+            mousewheel: true,
+            observeParents:true,
+            observeSlideChildren: true,
+            observer:true,
+            speed: 800,
+            loop: true,
+            pagination: {
+                el: "#pagi-C",
+                clickable: true,
+            },
+        });
+        var swiper = new Swiper("#swiperD", {
+            slidesPerView: 1,
+            direction: "vertical",
+            mousewheel: true,
+            observeParents:true,
+            observeSlideChildren: true,
+            observer:true,
+            speed: 800,
+            loop: true,
+            pagination: {
+                el: "#pagi-D",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>

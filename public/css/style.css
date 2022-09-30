@@ -34,6 +34,11 @@
 }
 
 @font-face {
+  font-family: Myriad-Pro-Light;
+  src: url(../font/MyriadPro-Light.otf) format("woff"), url(../font/MyriadPro-Light.otf) format("opentype");
+}
+
+@font-face {
   font-family: FrutigerBQ-Black;
   src: url(../font/FrutigerBQ-Black.woff) format("woff"), url(../font/FrutigerBQ-Black.otf) format("opentype");
 }
@@ -145,7 +150,6 @@ header .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 15px;
 }
 
 header .logo img {
@@ -161,7 +165,7 @@ header .lang {
 
 header .lang a {
   color: #4C4948;
-  font-family: Myriad-Pro;
+  font-family: Myriad-Pro-Light;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,6 +186,10 @@ header .lang a.active {
   border: 1px solid #4C4948;
 }
 
+header .lang a:hover {
+  color: #4C4948;
+}
+
 header .lang a span {
   -webkit-transform: translateY(1.5px);
           transform: translateY(1.5px);
@@ -193,12 +201,13 @@ header nav li {
 
 header nav li a {
   color: #4C4948;
-  font-family: Myriad-Pro;
+  font-family: Myriad-Pro-Light;
+  font-weight: 300;
   font-size: 14px;
   position: relative;
 }
 
-header nav li a.active::after {
+header nav li a::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -206,6 +215,17 @@ header nav li a.active::after {
   background-color: #4C4948;
   bottom: -5px;
   left: 0;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav li a.active::after, header nav li a:hover::after {
+  opacity: 1;
+}
+
+header nav li a:hover {
+  color: #4C4948;
 }
 
 header .header_menu {
@@ -260,7 +280,7 @@ header .header_right.color-white .lang a {
 }
 
 .touch {
-  padding: 80px 30px;
+  padding: 80px;
 }
 
 .touch > div {
@@ -314,7 +334,7 @@ footer img {
 }
 
 footer ul li {
-  margin-bottom: 3px;
+  margin-bottom: 6px;
 }
 
 footer ul li:last-child {
@@ -455,6 +475,28 @@ footer ul li:last-child {
   opacity: 1;
 }
 
+.main-pic-1 {
+  -webkit-transform: scale(1.05) translateX(-1.2%);
+          transform: scale(1.05) translateX(-1.2%);
+}
+
+.main-pic-2 {
+  -webkit-transform: scale(0.97) translate(1.1%, 1.5%);
+          transform: scale(0.97) translate(1.1%, 1.5%);
+}
+
+.main-pic-3 {
+  -webkit-transform: scale(1.06) translateX(-3.7%);
+          transform: scale(1.06) translateX(-3.7%);
+}
+
+.main-pic-4 {
+  -webkit-transform: scale(0.97) translate(1.1%, 1.5%);
+          transform: scale(0.97) translate(1.1%, 1.5%);
+  bottom: 0;
+  top: inherit;
+}
+
 .main-pic .slogan {
   font-family: FrutigerBQ-Black;
   font-weight: normal;
@@ -526,7 +568,7 @@ footer ul li:last-child {
 .color-box .arrow-box {
   position: absolute;
   left: 5%;
-  bottom: 10%;
+  bottom: 6%;
 }
 
 .color-box .arrow-box > div {
@@ -688,13 +730,14 @@ footer ul li:last-child {
   background-color: #4E738A;
   -webkit-transform: skewY(-2deg);
           transform: skewY(-2deg);
-  padding-bottom: 7%;
+  padding-bottom: 10%;
+  bottom: -5%;
 }
 
 .color-box.stage-4 .color-2 {
   background-color: #EFEEE3;
-  padding-bottom: 5%;
-  bottom: -14%;
+  padding-bottom: 7%;
+  bottom: -15%;
   -webkit-transform: skewY(2deg);
           transform: skewY(2deg);
 }
@@ -787,6 +830,36 @@ footer ul li:last-child {
 }
 
 .home_x_text a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.home_x_text a:hover .home_x_linkCircle {
+  background-color: transparent;
+}
+
+.home_x_text a:hover .home_x_linkCircle svg .cls-1 {
+  fill: #000;
+}
+
+.home_x_text a:hover .home_x_linkSquare {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+
+.home_x_pic {
+  width: 40%;
+}
+
+.home_x_pic img {
+  width: 90%;
+  margin-left: auto;
+  display: block;
+}
+
+.home_x_linkCircle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -799,28 +872,26 @@ footer ul li:last-child {
   width: 35px;
   height: 35px;
   background-color: #000;
+  border: 1px solid #000;
   border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-right: 10px;
 }
 
-.home_x_text a img {
+.home_x_linkCircle svg {
   width: 45%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.home_x_text a:hover img {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
-}
-
-.home_x_pic {
-  width: 40%;
-}
-
-.home_x_pic img {
-  width: 90%;
-  margin-left: auto;
-  display: block;
+.home_x_linkSquare {
+  padding: 5px 26px;
+  font-size: 12px;
+  border: 1px solid #666464;
+  color: #666464;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .any {
@@ -853,7 +924,7 @@ footer ul li:last-child {
 }
 
 .three-pic {
-  padding-top: 6.26%;
+  padding: 6.26% 80px 0;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1024,10 +1095,10 @@ footer ul li:last-child {
             transform: skewY(-5deg);
   }
   .color-box.stage-4 .color-2 {
-    padding-bottom: 13%;
+    padding-bottom: 12%;
     -webkit-transform: skewY(5deg);
             transform: skewY(5deg);
-    bottom: -15%;
+    bottom: -16%;
   }
   .color-box .arrow-box {
     left: 30px;
@@ -1116,7 +1187,7 @@ footer ul li:last-child {
     padding-bottom: 27%;
   }
   .color-box.stage-4 .color-2 {
-    padding-bottom: 25%;
+    padding-bottom: 22%;
   }
   .any {
     padding-bottom: 129%;
@@ -1194,10 +1265,6 @@ footer ul li:last-child {
   .home_x_text {
     padding-top: 30px;
   }
-  .home_x_text a {
-    width: 55px;
-    height: 55px;
-  }
   .home_x_text h3 {
     font-size: 19px;
     margin-bottom: 15px;
@@ -1248,9 +1315,6 @@ footer ul li:last-child {
   .home_x_text h3 {
     font-size: 16px;
   }
-  .home_x_text a {
-    width: 55px;
-  }
   .three-pic .common-text {
     margin-bottom: 24vw;
   }
@@ -1283,8 +1347,19 @@ footer ul li:last-child {
   text-align: center;
 }
 
+.about_main .title-common {
+  margin-bottom: 15px;
+}
+
+.about_main span {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 29px;
+  color: #707070;
+}
+
 .about_main p {
-  width: 90%;
+  width: 77%;
   margin: 0 auto 8.45vw;
 }
 
@@ -1313,12 +1388,18 @@ footer ul li:last-child {
   margin-bottom: 3.58vw;
 }
 
+.about_fit p {
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .about_rikulao {
   text-align: center;
 }
 
 .about_rikulao p {
-  width: 50%;
+  width: 77%;
   margin: 0 auto 8.09vw;
 }
 
@@ -1353,6 +1434,8 @@ footer ul li:last-child {
 
 .good p {
   text-align: center;
+  width: 77%;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1379,6 +1462,7 @@ footer ul li:last-child {
     margin: 0;
     line-height: 1.7;
     text-align: justify;
+    width: 100%;
   }
   .good p br {
     display: none;
@@ -1406,6 +1490,7 @@ footer ul li:last-child {
   }
   .about_fit p {
     text-align: justify;
+    width: 100%;
   }
   .about_rikulao h2 {
     margin-bottom: 15px;
@@ -1516,8 +1601,24 @@ footer ul li:last-child {
   color: #9FA0A0;
 }
 
+.product_tab .viewall {
+  margin: 12px 0 6px auto;
+  display: block;
+  padding: 8px 20px;
+  border: 1px solid #666464;
+  color: #666464;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product_tab .viewall:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
 .product_classify {
-  padding: 17.78vw 40px 94px;
+  padding: 17.78vw 80px 94px;
 }
 
 .product_classify_pic {
@@ -1529,9 +1630,16 @@ footer ul li:last-child {
   width: 60%;
 }
 
+.product_classify_intro .bike_list_class {
+  background-color: #fff !important;
+}
+
+.product_classify_intro .bike_brand p {
+  background-color: #EAE9EA;
+}
+
 .product_classify_text {
   width: 68%;
-  padding-bottom: 50px;
 }
 
 .product_classify_text .inner {
@@ -1579,7 +1687,7 @@ footer ul li:last-child {
   font-size: 28px;
   font-family: FrutigerBQ-Black;
   line-height: 1.2;
-  letter-spacing: 13px;
+  letter-spacing: 10px;
   margin-bottom: 15px;
   width: 100%;
 }
@@ -1593,6 +1701,18 @@ footer ul li:last-child {
   width: 100%;
   bottom: 0;
   right: -30%;
+}
+
+.product_classify_mainPic.mainPic-M27 {
+  bottom: -12.5%;
+}
+
+.product_classify_mainPic.mainPic-peloton {
+  bottom: -7.5%;
+}
+
+.product_classify_mainPic.mainPic-cadence {
+  bottom: 0;
 }
 
 .product_classify_spec {
@@ -1749,7 +1869,10 @@ footer ul li:last-child {
 }
 
 .product_classify_color {
-  margin-bottom: 25px;
+  position: absolute;
+  width: 100%;
+  top: calc(100% + 22px);
+  left: 0;
 }
 
 .product_classify_color label {
@@ -1761,10 +1884,11 @@ footer ul li:last-child {
 .product_classify_color .color-select {
   width: 34px;
   height: 34px;
-  padding: 3.5px;
-  margin-left: 13px;
+  padding: 3px;
+  margin-left: 12px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border: 0;
 }
 
 .product_classify_color .color-select .color-inner {
@@ -1840,16 +1964,26 @@ footer ul li:last-child {
 }
 
 .product_content {
-  padding: 52px 45px 62px;
+  background: -webkit-gradient(linear, left top, right top, from(#E6E6E6), color-stop(50%, #F4F4F4), color-stop(66%, #FFFFFF), to(#EBEBEC));
+  background: linear-gradient(to right, #E6E6E6 0%, #F4F4F4 50%, #FFFFFF 66%, #EBEBEC 100%);
+}
+
+.product_content_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .product_content_left {
-  width: 25%;
+  width: 20%;
   padding-right: 53px;
 }
 
@@ -1858,12 +1992,16 @@ footer ul li:last-child {
 }
 
 .product_content_right {
-  width: 75%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.product_content_right #pc-tabContent {
+  mix-blend-mode: multiply;
 }
 
 .product_content_right .swiper-button-next, .product_content_right .swiper-button-prev {
@@ -1908,14 +2046,79 @@ footer ul li:last-child {
   width: 100%;
 }
 
-.product_swiper {
-  margin-bottom: 1.6vw;
+.product_content_right .tab-content {
   width: 100%;
+}
+
+.product_content .product_classify_spec_item .bar {
+  background-color: #fff;
+}
+
+.product-slider {
+  width: 100%;
+  position: relative;
+  padding-bottom: 66.67%;
+}
+
+.product-slider .swiper-pagination {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 24px);
+}
+
+.product-slider .swiper-pagination-bullet {
+  width: 24px;
+  height: 1px;
+  border-radius: 0;
+  display: block;
+  margin-top: 9px;
+  background-color: #BFC0C0;
+  opacity: 1;
+}
+
+.product-slider .swiper-pagination-bullet:first-child {
+  margin-top: 0;
+}
+
+.product-slider .swiper-pagination-bullet-active {
+  background-color: #040000;
+}
+
+.product_pagi {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 24px);
+}
+
+.product_pagi_bar {
+  width: 24px;
+  height: 1px;
+  border-radius: 0;
+  display: block;
+  margin-top: 9px;
+  background-color: #BFC0C0;
+  opacity: 1;
+}
+
+.product_pagi_bar:first-child {
+  margin-top: 0;
+}
+
+.product_pagi_bar.active {
+  background-color: #040000;
+}
+
+.product_swiper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .product_swiper_pic {
   width: 100%;
-  padding-bottom: 54.83%;
+  padding-bottom: 66.67%;
   position: relative;
 }
 
@@ -1930,8 +2133,10 @@ footer ul li:last-child {
 }
 
 .product_detail {
-  padding-bottom: 72px;
-  width: 100%;
+  padding-top: 116px;
+  padding-bottom: 55px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .product_detail_item h3 {
@@ -1980,6 +2185,37 @@ footer ul li:last-child {
   border-top: 1px solid #000;
   width: 100% !important;
   text-align: justify;
+}
+
+.product_detail .nav-tabs {
+  border: 0;
+}
+
+.product_detail .nav-tabs .nav-link {
+  border-radius: 50%;
+}
+
+.product_detail_color {
+  border: 0;
+}
+
+.product-breadcrumb {
+  margin-top: 80px;
+  border-top: 1px solid #040000;
+}
+
+.product-breadcrumb .breadcrumb {
+  width: 70%;
+  margin: 0 auto;
+  height: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-breadcrumb .breadcrumb a, .product-breadcrumb .breadcrumb li {
+  color: #9FA0A0;
+  font-size: 12px;
 }
 
 .bike_list {
@@ -2151,10 +2387,54 @@ footer ul li:last-child {
      object-fit: contain;
 }
 
+@media screen and (max-width: 1700px) {
+  .product_content_inner {
+    width: 80%;
+  }
+  .product_content_left {
+    padding-right: 30px;
+  }
+  .product-breadcrumb .breadcrumb {
+    width: 80%;
+  }
+  .product_detail {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .bike_list_text .product_classify_slogan {
     font-size: 22px;
     letter-spacing: 8px;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .product_content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .product_content_inner {
+    width: 100%;
+  }
+  .product_content_left {
+    padding-right: 20px;
+    width: 195px;
+  }
+  .product_content_right {
+    width: calc(100% - 195px);
+  }
+  .product-breadcrumb {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .product-breadcrumb .breadcrumb {
+    width: 100%;
+  }
+  .product_detail {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
@@ -2322,12 +2602,17 @@ footer ul li:last-child {
     bottom: 20px;
   }
   .product_content {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0;
+    background: transparent;
   }
   .product_content_left {
     width: 100%;
-    padding-right: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding: 46px 20px 55px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
   .product_content_left .product_classify_intro {
     display: -webkit-box;
@@ -2336,20 +2621,52 @@ footer ul li:last-child {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
   .product_content_left .product_classify_intro_left {
     padding-right: 30px;
+    width: 210px;
+  }
+  .product_content_left .product_classify_intro_right {
+    width: calc(100% - 210px);
   }
   .product_content_left .product_classify_spec {
-    width: 228px;
+    width: 100%;
+  }
+  .product_content_left .product_classify_spec_item .bar {
+    background-color: #E0E0E0;
   }
   .product_content_left .product_classify_slogan {
     font-size: 28px;
     margin: 0;
   }
+  .product_content_left .product_classify_color {
+    position: static;
+    margin-bottom: 25px;
+  }
   .product_content_right {
     width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: -webkit-gradient(linear, left top, right top, from(#E6E6E6), color-stop(50%, #F4F4F4), color-stop(66%, #FFFFFF), to(#EBEBEC));
+    background: linear-gradient(to right, #E6E6E6 0%, #F4F4F4 50%, #FFFFFF 66%, #EBEBEC 100%);
+    mix-blend-mode: none;
+  }
+  .product_content .bike_brand {
+    margin-bottom: 15px;
+  }
+  .product-slider .swiper-pagination {
+    top: calc(100% + 13px);
+    right: 20px;
+  }
+  .product-breadcrumb {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 0;
+  }
+  .product_detail {
+    padding: 0 20px 75px;
   }
   .bike_list_item {
     margin-bottom: 40px;
@@ -2383,13 +2700,6 @@ footer ul li:last-child {
   .product_content_left {
     padding-left: 20px;
     padding-right: 20px;
-  }
-  pt
-.product_content_left .product_classify_intro_left {
-    width: 44%;
-  }
-  .product_content_left .product_classify_spec {
-    width: 56%;
   }
   .product_content_left .product_classify_tag {
     width: 150px;
@@ -2428,7 +2738,9 @@ footer ul li:last-child {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    padding: 0 20px;
+  }
+  .product_detail .row > div:nth-child(2) .product_detail_item:first-child h3 {
+    border-top: 0;
   }
 }
 
@@ -2482,13 +2794,9 @@ footer ul li:last-child {
   }
   .product_content {
     padding-top: 0;
-    padding-bottom: 15.45vw;
   }
-  .product_content_left .product_classify_intro {
-    padding-top: 8.54vw;
-  }
-  .product_content_left .product_classify_intro_left {
-    padding-right: 5.17vw;
+  .product_content_left {
+    padding-right: 23px;
   }
   .product_content_left .product_classify_slogan {
     font-size: 26px;
@@ -2496,6 +2804,10 @@ footer ul li:last-child {
   .product_content_right > p {
     margin-top: 7.08vw;
     margin-bottom: 10.89vw;
+  }
+  .product_content .bike_brand {
+    width: 100%;
+    padding-bottom: 100%;
   }
   .product_swiper {
     margin-bottom: 13.41vw;
@@ -2544,6 +2856,23 @@ footer ul li:last-child {
     font-size: 24px;
     letter-spacing: 8px;
   }
+  .product_content_left .product_classify_intro_left {
+    width: 43%;
+  }
+  .product_content_left .product_classify_intro_right {
+    width: 57%;
+  }
+  .product_content_left .product_classify_color {
+    margin-bottom: 12px;
+  }
+  .product_content_left .product_classify_color .color-select {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+  }
+  .product_content_left .product_classify_color .color-select:first-child {
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -2562,6 +2891,10 @@ footer ul li:last-child {
     height: 12vw;
     right: 20px;
   }
+  .product_content_left {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .product_content_left .product_classify_slogan {
     font-size: 20px;
     letter-spacing: 8px;
@@ -2570,6 +2903,14 @@ footer ul li:last-child {
   .product_content_left .product_classify_slogan_img {
     display: block;
     width: 100%;
+  }
+  .product-breadcrumb {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .product_detail {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

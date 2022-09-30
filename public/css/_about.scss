@@ -15,8 +15,17 @@
     &_main {
         padding: 9.44vw 10.89vw 9.56vw;
         text-align: center;
+        .title-common {
+            margin-bottom: 15px;
+        }
+        span {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 29px;
+            color: #707070;
+        }
         p {
-            width: 90%;
+            width: 77%;
             margin: 0 auto 8.45vw;
         }
     }
@@ -39,11 +48,16 @@
         h2 {
             margin-bottom: 3.58vw;
         }
+        p {
+            width: 77%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     &_rikulao {
         text-align: center;
         p {
-            width: 50%;
+            width: 77%;
             margin: 0 auto 8.09vw;
         }
     }
@@ -73,8 +87,9 @@
     }
     p {
         text-align: center;
+        width: 77%;
         // width: 50%;
-        // margin: 0 auto;
+        margin: 0 auto;
     }
 }
 
@@ -103,6 +118,7 @@
             margin: 0;
             line-height: 1.7;
             text-align: justify;
+            width: 100%;
             br {
                 display: none;
             }
@@ -131,6 +147,7 @@
             }
             p {
                 text-align: justify;
+                width: 100%;
             }
         }
         &_rikulao {
