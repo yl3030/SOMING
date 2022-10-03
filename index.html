@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOMING</title>
     <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/aos/aos.css">
     <link rel="stylesheet" href="./public/css/style.css">
 </head>
 <body>
@@ -37,13 +38,16 @@
     </header>
     <main>
         <div class="main-pic">
-            <img class="main-pic_content main-pic-1 active" src="./public/img/banner-1.png" alt="Bicycle">
-            <img class="main-pic_content main-pic-2" src="./public/img/banner-2.png" alt="Bicycle">
-            <img class="main-pic_content main-pic-3" src="./public/img/banner-3.png" alt="Bicycle">
-            <img class="main-pic_content main-pic-4" src="./public/img/banner-4.png" alt="Bicycle">
-            <h1 class="slogan">DREAM IN COLOUR<br>RIDE IN STYLE</h1>
+            <img class="main-pic_content main-pic-1 active" src="./public/img/main-1.png" alt="Bicycle">
+            <img class="main-pic_content main-pic-2" src="./public/img/main-2.png" alt="Bicycle">
+            <img class="main-pic_content main-pic-3" src="./public/img/main-3.png" alt="Bicycle">
+            <img class="main-pic_content main-pic-4" src="./public/img/main-4.png" alt="Bicycle">
+            <h1 class="slogan">
+                <div data-aos="fade-up" data-aos-duration="800">IN COLOUR</div>
+                <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">RIDE IN STYLE</div>
+            </h1>
         </div>
-        <div class="color-box stage-4">
+        <div class="color-box stage-1">
             <div class="color_text">
                 <p class="common-text text-1 active">
                     <span class="d-lg-block d-none">
@@ -87,9 +91,8 @@
                 <h2>SOMINGS x RIKULAU</h2>
                 <h3>Enjoy the Journey with us.</h3>
                 <p>The SOMINGS × RIKULAU series is SOMINGS cooperate with professional bike brand RIKULAU. It combines RIKULAU's technology in metal forging, as well as SOMINGS professional beauty in color and appearance. Integrating the unique DNA of the two, whether it is a rider who cares about the appearance, the interior, or both, he can get the best riding experience on this model. Now, start an extraordinary journey with us!</p>
-                <a href="./product.html" class="d-flex align-items-center justify-content-start">
+                <a href="./product.html" class="d-flex align-items-center justify-content-start btn-productLink">
                     <div class="home_x_linkCircle">
-                        <!-- <img src="./public/img/arrow-long-white.svg" alt=""> -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.85 11.51"><defs><style>.cls-1{fill:#fff;fill-rule:evenodd;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="图层_1" data-name="图层 1"><path class="cls-1" d="M9.21,11.45l5.62-5.58a.28.28,0,0,0,0-.22L9.21,0A.23.23,0,0,0,9,0l-.7.74,4.4,4.4H.63A.65.65,0,0,0,0,5.8H0a.65.65,0,0,0,.63.62H12.57L8.28,10.75l.7.7c.08.08.19.08.23,0Z"/></g></g></svg>
                     </div>
                     <div class="home_x_linkSquare">See Bikes</div>
@@ -116,11 +119,27 @@
             </div>
         </div>
         <div class="three-pic">
-            <p class="common-text">The core tenet of Somings is a belief in the transformative ability of bikes to make lifestyle changes more enjoyable, and make the planet a better place. Additionally, Cycling is not only free from time and place restrictions but also enables cyclists to enjoy the freedom to go wherever they want and achieve environmental sustainability. </p>
+            <div class="three-pic_top">
+                <div class="three-pic_top_1"><img src="./public/img/three-top-1.png" alt=""></div>
+                <div class="three-pic_top_2"><img src="./public/img/three-top-2.png" alt=""></div>
+                <div class="three-pic_top_3"><img src="./public/img/three-top-3.png" alt=""></div>
+            </div>
+            <div class="three-pic_text">
+                <p class="common-text">The core tenet of Somings is a belief in the transformative ability of bikes to make lifestyle changes more enjoyable, and make the planet a better place. Additionally, Cycling is not only free from time and place restrictions but also enables cyclists to enjoy the freedom to go wherever they want and achieve environmental sustainability. The nice riding experience starts with the nice bike. We put a great deal of time and energy into developing our bikes: It is designed to ensure that at every age  is riding a bike that fits just right.</p>
+                <a href="./product.html" class="d-flex align-items-center justify-content-md-end justify-content-start btn-productLink">
+                    <div class="home_x_linkCircle">
+                        <!-- <img src="./public/img/arrow-long-white.svg" alt=""> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.85 11.51"><defs><style>.cls-1{fill:#fff;fill-rule:evenodd;}</style></defs><g id="圖層_2" data-name="圖層 2"><g id="图层_1" data-name="图层 1"><path class="cls-1" d="M9.21,11.45l5.62-5.58a.28.28,0,0,0,0-.22L9.21,0A.23.23,0,0,0,9,0l-.7.74,4.4,4.4H.63A.65.65,0,0,0,0,5.8H0a.65.65,0,0,0,.63.62H12.57L8.28,10.75l.7.7c.08.08.19.08.23,0Z"/></g></g></svg>
+                    </div>
+                    <div class="home_x_linkSquare">View All Bikes</div>
+                </a>
+            </div>
+           
             <div class="row">
                 <div class="col-md-6">
                     <div class="three-pic_inner">
-                        <img src="./public/img/home-pic6.png" alt="">
+                        <img class="d-md-block d-none" src="./public/img/home-pic6-pc.jpg" alt="">
+                        <img class="d-md-none d-block" src="./public/img/home-pic6.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -159,9 +178,13 @@
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/aos/aos.js"></script>
     <script src="./public/js/index.js"></script>
 
     <script>
+        AOS.init({
+            once:true,
+        });
         $(".gototouch").click(function(){
             let top = $("#touch").offset().top;
             $("html, body").animate({scrollTop:top},300);
