@@ -309,6 +309,7 @@
     width: fit-content;
     display: block;
     &:hover {
+        cursor: pointer;
         .home_x_link {
             &Circle {
                 background-color: transparent;
@@ -453,6 +454,7 @@
             font-size: 15px;
             left: 4.95%;
             bottom: 31.94%;
+            letter-spacing: 0.25em;
         }
     }
     &_top {

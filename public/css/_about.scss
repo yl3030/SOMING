@@ -1,7 +1,7 @@
 .about {
     &_banner {
         width: 100%;
-        padding-bottom: 61.43%;
+        padding-bottom: 53.23%;
         position: relative;
         img {
             width: 100%;
@@ -56,9 +56,26 @@
     }
     &_rikulao {
         text-align: center;
-        p {
-            width: 77%;
+        >p {
+            // width: 77%;
+            width: 61%;
             margin: 0 auto 8.09vw;
+        }
+        &_pic {
+            position: relative;
+            &_text {
+                position: absolute;
+                white-space: nowrap;
+                top: 25vw;
+                left: 6vw;
+                p {
+                    margin: 0;
+                    color: #3E3A39;
+                    font-size: 15px;
+                    display: inline-block;
+                    letter-spacing: 0.25em;
+                }
+            }
         }
     }
 }
@@ -154,11 +171,23 @@
             h2 {
                 margin-bottom: 15px;
             }
-            p {
+            >p {
                 width: 100%;
                 margin-bottom: 60px;
                 padding: 0 25px;
                 text-align: justify;
+            }
+            &_pic {
+                &_text {
+                    top: 80vw;
+                    left: 5.2vw;
+                    p {
+                        display: block;
+                        &:nth-child(2) {
+                            transform: translateX(53px);
+                        }
+                    }
+                }
             }
         }
     }
@@ -190,7 +219,7 @@
             padding: 50px 25px;
         }
         &_rikulao {
-            p {
+            >p {
                 margin-bottom: 50px;
             }
         }
