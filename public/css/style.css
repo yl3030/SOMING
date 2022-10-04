@@ -275,6 +275,10 @@ header .header_right.color-white .header_nav ul li a.active::after {
   background-color: #fff;
 }
 
+header .header_right.color-white .header_nav ul li a::after {
+  background-color: #fff;
+}
+
 header .header_right.color-white .lang a {
   color: #fff;
   border-color: #fff;
