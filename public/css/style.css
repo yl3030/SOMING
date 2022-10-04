@@ -489,8 +489,8 @@ footer ul li:last-child {
   width: fit-content;
   font-size: 44px;
   line-height: 1.3;
-  left: 50px;
-  bottom: 0;
+  left: 70px;
+  bottom: 5%;
   color: #fff;
   letter-spacing: 3px;
   margin: 0;
@@ -1226,6 +1226,11 @@ footer ul li:last-child {
   .main-pic .slogan {
     font-size: 32px;
   }
+  .main-pic img {
+    width: 160%;
+    left: -30vw;
+    bottom: -25vw;
+  }
   .color-box {
     padding-bottom: 60%;
   }
@@ -1819,6 +1824,7 @@ footer ul li:last-child {
   width: 100%;
   bottom: 0;
   right: -40%;
+  z-index: -1;
 }
 
 .product_classify_mainPic.mainPic-M27 {
@@ -1982,6 +1988,11 @@ footer ul li:last-child {
   left: -40%;
 }
 
+.product_classify_item:nth-child(even) .product_classify_tag {
+  margin-right: 16px;
+  margin-left: auto;
+}
+
 .product_classify_item:last-child {
   margin-bottom: 0;
 }
@@ -2050,8 +2061,8 @@ footer ul li:last-child {
 }
 
 .product_more:hover img {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  -webkit-animation: productBtnHover 0.6s;
+          animation: productBtnHover 0.6s;
 }
 
 .product_bannerContent {
@@ -2334,6 +2345,44 @@ footer ul li:last-child {
 .product-breadcrumb .breadcrumb a, .product-breadcrumb .breadcrumb li {
   color: #9FA0A0;
   font-size: 12px;
+}
+
+@-webkit-keyframes productBtnHover {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  33.3333% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes productBtnHover {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  33.3333% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  50% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .bike_list {
@@ -2711,6 +2760,10 @@ footer ul li:last-child {
   }
   .product_classify_item:last-child .product_classify_dash {
     display: none;
+  }
+  .product_classify_tag {
+    margin-left: 16px !important;
+    margin-right: auto !important;
   }
   .product_more {
     position: absolute;
