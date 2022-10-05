@@ -422,12 +422,13 @@
             position: absolute;
             right: 0;
             top: calc(100% + 24px);
+            display: flex;
             &-bullet {
-                width: 24px;
+                width: 50px;
                 height: 1px;
                 border-radius: 0;
                 display: block;
-                margin-top: 9px;
+                // margin-top: 9px;
                 background-color: #BFC0C0;
                 opacity: 1;
                 &:first-child {
@@ -896,6 +897,14 @@
             }
             &_intro {
                 width: 56%;
+                .bike_brand {
+                    p {
+                        background-color: transparent;
+                        &.brand-transverse {
+                            background-color: #fff;
+                        }
+                    }
+                }
             }
             &_dash {
                 width: calc(100% - 40px);

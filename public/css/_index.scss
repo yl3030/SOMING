@@ -79,7 +79,8 @@
     .arrow-box {
         position: absolute;
         left: 5%;
-        bottom: 6%;
+        // bottom: 6%;
+        bottom: 3%;
         // z-index: 100;
         >div {
             justify-content: flex-start;
@@ -633,14 +634,15 @@
 
 @media screen and (max-width:767.98px) {
     .main-pic {
-        padding-bottom: calc(100vh - 60vw - 60px);
+        padding-bottom: calc(100vh - 60vw - 60px - 60px);
         .slogan {
             font-size: 32px;
         }
         img {
             width: 160%;
             left: -30vw;
-            bottom: -25vw;
+            // bottom: -25vw;
+            bottom: 10vw;
         }
     } 
     .color-box {
@@ -717,7 +719,6 @@
             width: 100%;
             box-sizing: border-box;
             line-height: 1.7;
-            // margin-bottom: 100px;
             text-align: justify;
         }
         .pic-box {
@@ -780,10 +781,6 @@
             padding-top: 60px;
             &_text {
                 padding-top: 30px;
-                // a {
-                //     width: 55px;
-                //     height: 55px;
-                // }
                 h3 {
                     font-size: 19px;
                     margin-bottom: 15px;
@@ -829,7 +826,10 @@
 
 @media screen and (max-width:400px) {
     .main-pic {
-        padding-bottom: calc(100vh - 70vw - 60px);
+        padding-bottom: calc(100vh - 70vw - 60px - 60px);
+        img {
+            bottom: -30vw;
+        }
     }
     .color-box {
         padding-bottom: 70%;
