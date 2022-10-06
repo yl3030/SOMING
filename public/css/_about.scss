@@ -222,6 +222,14 @@
             >p {
                 margin-bottom: 50px;
             }
+            &_pic {
+                &_text {
+                    p {
+                        letter-spacing: 0.3em;
+                        font-size: 13px;
+                    }
+                }
+            }
         }
     }
 }

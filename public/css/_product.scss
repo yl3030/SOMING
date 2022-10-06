@@ -425,17 +425,19 @@
             display: flex;
             &-bullet {
                 width: 50px;
-                height: 1px;
+                height: 21px;
                 border-radius: 0;
                 display: block;
                 // margin-top: 9px;
-                background-color: #BFC0C0;
+                // background-color: #BFC0C0;
+                background: linear-gradient(to bottom, transparent 0%, transparent 45.45%, #BFC0C0 45.45%, #BFC0C0 54.55%, transparent 54.55%, transparent 100%);
                 opacity: 1;
                 &:first-child {
                     margin-top: 0;
                 }
                 &-active {
-                    background-color: #040000;
+                    // background-color: #040000;
+                    background: linear-gradient(to bottom, transparent 0%, transparent 45.45%, #040000 45.45%, #040000 54.55%, transparent 54.55%, transparent 100%);
                 }
             }
         }
@@ -1223,6 +1225,9 @@
         &_brand {
             width: 110px;
             padding-bottom: 110px;
+            p {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -1380,6 +1385,9 @@
                             left: -18%;
                         }
                     }
+                }
+                &.peloton {
+                    margin-bottom: 64vw;
                 }
             }
         }

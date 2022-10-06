@@ -641,7 +641,6 @@
         img {
             width: 160%;
             left: -30vw;
-            // bottom: -25vw;
             bottom: 10vw;
         }
     } 
@@ -794,6 +793,12 @@
     .three-pic {
         padding-left: 15px;
         padding-right: 15px;
+        &_inner {
+            p {
+                letter-spacing: 0.05em;
+                font-size: 12px;
+            }
+        }
     }
     .color-box {
         &.stage {
@@ -812,6 +817,11 @@
             font-size: 25px;
             left: 5%;
         }
+        img {
+            bottom: -28vw;
+            width: 210%;
+            left: -55vw;
+        }
     } 
     .second-title {
         font-size: 16px;
@@ -828,7 +838,9 @@
     .main-pic {
         padding-bottom: calc(100vh - 70vw - 60px - 60px);
         img {
-            bottom: -30vw;
+            bottom: -28vw;
+            width: 210%;
+            left: -55vw;
         }
     }
     .color-box {
@@ -850,9 +862,6 @@
                 h3 {
                     font-size: 16px;
                 }
-                // a {
-                //     width: 55px;
-                // }
             }
         }
     }
@@ -860,8 +869,15 @@
         &_text {
             margin-bottom: 24vw;
         }
-        .common-text {
-            // margin-bottom: 24vw;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .main-pic {
+        img {
+            bottom: -28vw;
+            width: 200%;
+            left: -50vw;
         }
     }
 }
@@ -871,6 +887,11 @@
     .main-pic {
         .slogan {
             font-size: 24px;
+        }
+        img {
+            bottom: -20vw;
+            width: 150%;
+            left: -25vw;
         }
     }
 }

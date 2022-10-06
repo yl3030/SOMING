@@ -215,14 +215,18 @@ header nav li a::after {
   height: 1px;
   background-color: #4C4948;
   bottom: -5px;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   opacity: 0;
+  width: 20%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 header nav li a.active::after, header nav li a:hover::after {
   opacity: 1;
+  width: 100%;
 }
 
 header nav li a:hover {
@@ -1364,6 +1368,10 @@ footer ul li:last-child {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .three-pic_inner p {
+    letter-spacing: 0.05em;
+    font-size: 12px;
+  }
   .color-box.stage-2 .color-2 {
     padding-bottom: 20%;
   }
@@ -1373,6 +1381,11 @@ footer ul li:last-child {
   .main-pic .slogan {
     font-size: 25px;
     left: 5%;
+  }
+  .main-pic img {
+    bottom: -28vw;
+    width: 210%;
+    left: -55vw;
   }
   .second-title {
     font-size: 16px;
@@ -1388,7 +1401,9 @@ footer ul li:last-child {
     padding-bottom: calc(100vh - 70vw - 60px - 60px);
   }
   .main-pic img {
-    bottom: -30vw;
+    bottom: -28vw;
+    width: 210%;
+    left: -55vw;
   }
   .color-box {
     padding-bottom: 70%;
@@ -1411,9 +1426,22 @@ footer ul li:last-child {
   }
 }
 
+@media screen and (max-width: 380px) {
+  .main-pic img {
+    bottom: -28vw;
+    width: 200%;
+    left: -50vw;
+  }
+}
+
 @media screen and (max-width: 350px) {
   .main-pic .slogan {
     font-size: 24px;
+  }
+  .main-pic img {
+    bottom: -20vw;
+    width: 150%;
+    left: -25vw;
   }
 }
 
@@ -1648,6 +1676,10 @@ footer ul li:last-child {
   }
   .about_rikulao > p {
     margin-bottom: 50px;
+  }
+  .about_rikulao_pic_text p {
+    letter-spacing: 0.3em;
+    font-size: 13px;
   }
 }
 
@@ -2203,10 +2235,11 @@ footer ul li:last-child {
 
 .product-slider .swiper-pagination-bullet {
   width: 50px;
-  height: 1px;
+  height: 21px;
   border-radius: 0;
   display: block;
-  background-color: #BFC0C0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(45.45%, transparent), color-stop(45.45%, #BFC0C0), color-stop(54.55%, #BFC0C0), color-stop(54.55%, transparent), to(transparent));
+  background: linear-gradient(to bottom, transparent 0%, transparent 45.45%, #BFC0C0 45.45%, #BFC0C0 54.55%, transparent 54.55%, transparent 100%);
   opacity: 1;
 }
 
@@ -2215,7 +2248,8 @@ footer ul li:last-child {
 }
 
 .product-slider .swiper-pagination-bullet-active {
-  background-color: #040000;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(45.45%, transparent), color-stop(45.45%, #040000), color-stop(54.55%, #040000), color-stop(54.55%, transparent), to(transparent));
+  background: linear-gradient(to bottom, transparent 0%, transparent 45.45%, #040000 45.45%, #040000 54.55%, transparent 54.55%, transparent 100%);
 }
 
 .product_pagi {
@@ -3002,6 +3036,9 @@ footer ul li:last-child {
     width: 110px;
     padding-bottom: 110px;
   }
+  .bike_brand p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -3115,6 +3152,9 @@ footer ul li:last-child {
   }
   .product_classify_item:nth-child(even) .product_classify_mainPic {
     left: -18%;
+  }
+  .product_classify_item.peloton {
+    margin-bottom: 64vw;
   }
   .product_more {
     width: 10vw;
