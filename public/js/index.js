@@ -79,17 +79,20 @@ $(".prev").click(function () {
     // $(this).parents(".color-box").removeClass("stage-1").addClass("stage-4");
     $(this).parents(".color-box").removeClass("stage-1").addClass("stage-3");
     $(".main-pic").css("background-color","#EDC3CA");
+    $(this).parents(".color-box").find(".common-text.text-3").addClass("active").siblings(".common-text").removeClass("active");
     // stage = 4;
     stage = 3;
   } else if (stage == 2) {
     $(".main-pic-1").addClass("active").siblings(".main-pic_content").removeClass("active");
     $(this).parents(".color-box").removeClass("stage-2").addClass("stage-1");
     $(".main-pic").css("background-color","#9DC5D4");
+    $(this).parents(".color-box").find(".common-text.text-1").addClass("active").siblings(".common-text").removeClass("active");
     stage = 1;
   } else if (stage == 3) {
     $(".main-pic-2").addClass("active").siblings(".main-pic_content").removeClass("active");
     $(this).parents(".color-box").removeClass("stage-3").addClass("stage-2");
     $(".main-pic").css("background-color","#CBC3BB");
+    $(this).parents(".color-box").find(".common-text.text-2").addClass("active").siblings(".common-text").removeClass("active");
     stage = 2;
   } 
   // else if (stage == 4) {
