@@ -280,13 +280,23 @@ main {
 footer {
     padding: 110px 40px 20px;
     background-color: #e9eaea;
-    p {
+    .copyright {
         line-height: 1;
         font-family: "Gill Sans";
         font-weight: 300;
         letter-spacing: 1.2px;
         font-size: 11px;
         margin-bottom: 5px;
+        text-align: right;
+    }
+    .address {
+        font-family: Myriad-Pro;
+        color: #2f2725;
+        margin-bottom: 10px;
+        text-align: right;
+        br {
+            display: none;
+        }
     }
     img {
         width: 26px;
@@ -401,6 +411,16 @@ footer {
             
         }
     }
+    footer {
+        .address {
+            text-align: left;
+            margin-top: 40px;
+            margin-bottom: 0;
+            br {
+                display: block;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:575.98px) {
@@ -431,5 +451,23 @@ footer {
     }
     .title-common {
         font-size: 28px;
+    }
+}
+
+@media screen and (max-width:390px) {
+    footer {
+        nav {
+            width: 100%;
+        }
+        >div {
+            width: 100%;
+            margin-top: 10px;
+        }
+        img {
+            margin-left: 0;
+        }
+        .copyright {
+            text-align: left;
+        }
     }
 }

@@ -1061,6 +1061,9 @@
             }
             &_item {
                 margin-bottom: 35vw;
+                &.peloton {
+                    margin-bottom: 40vw;
+                }
             }
         }
         &_more {
@@ -1144,6 +1147,9 @@
                         left: 30px;
                     }
                 }
+                &.peloton {
+                    margin-bottom: 45vw;
+                }
             }
         }
         &_more {
@@ -1191,6 +1197,9 @@
                             left: -5%;
                         }
                     }
+                }
+                &.peloton {
+                    margin-bottom: 55vw;
                 }
             }
         }
@@ -1325,6 +1334,9 @@
                         }
                     }
                 }
+                &.peloton {
+                    margin-bottom: 64vw;
+                }
             }
             &_tag {
                 span {
@@ -1385,9 +1397,6 @@
                             left: -18%;
                         }
                     }
-                }
-                &.peloton {
-                    margin-bottom: 64vw;
                 }
             }
         }

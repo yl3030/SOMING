@@ -660,6 +660,24 @@
                 margin: 5px 0 0;
                 display: none;
             }
+            >div {
+                .arrow {
+                    &:hover {
+                        opacity: 0.7;
+                        .bar {
+                            &-top {
+                                left: 45%;
+                            }
+                            &-bottom {
+                                left: 45%;
+                            }
+                            &-middle {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
         &.stage-1 {
             .color-1 {
@@ -838,9 +856,9 @@
     .main-pic {
         padding-bottom: calc(100vh - 70vw - 60px - 60px);
         img {
-            bottom: -28vw;
-            width: 210%;
-            left: -55vw;
+            bottom: -30vw;
+            width: 200%;
+            left: -61vw;
         }
     }
     .color-box {
