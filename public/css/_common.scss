@@ -290,8 +290,8 @@ footer {
         text-align: right;
     }
     .address {
-        font-family: Myriad-Pro;
-        color: #2f2725;
+        // font-family: Myriad-Pro;
+        // color: #2f2725;
         margin-bottom: 10px;
         text-align: right;
         br {
@@ -448,13 +448,16 @@ footer {
     footer {
         padding-left: 15px;
         padding-right: 15px;
+        .address {
+            font-size: 12px;
+        }
     }
     .title-common {
         font-size: 28px;
     }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width:387px) {
     footer {
         nav {
             width: 100%;
